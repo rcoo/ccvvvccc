@@ -1,0 +1,47 @@
+CineVault / viE - تشغيل سريع
+============================
+
+1) ثبّت Node.js 22.12 أو أحدث.
+
+2) افتح Terminal داخل مجلد المشروع ثم:
+   npm install
+   npm run dev
+
+3) افتح:
+   http://localhost:3000
+
+4) دخول المشاهد للتجربة:
+   DEMO-PASS
+
+5) دخول الإدارة المخفي:
+   في نفس خانة Access Code اكتب:
+   vin01012007
+
+   بعدها تظهر صفحة دخول الإدارة:
+   Username: vin
+   Password: waswaswas
+
+6) فحص وبناء Production:
+   npm run check
+   npm run build
+   npm start
+
+7) Railway:
+   - ارفع المشروع إلى GitHub (ملف .env لن يُرفع لأنه داخل .gitignore).
+   - اربط GitHub بـ Railway.
+   - أضف Volume على /app/data
+   - DATA_DIR=/app/data
+   - NODE_ENV=production
+   - ADMIN_PORTAL_CODE=vin01012007
+   - ADMIN_USERNAME=vin
+   - ADMIN_PASSWORD=waswaswas
+   - ضع SESSION_SECRET عشوائيًا وطويلًا.
+   - Build: npm run build
+   - Start: npm start
+   - Health check: /api/health
+
+مهم:
+- استخدم npm run dev للتجربة المحلية عبر HTTP.
+- الفيديوهات الحالية Demo فقط؛ غيّرها من لوحة الإدارة إلى مصادر تملك حق استخدامها.
+- التخزين الحالي data/db.json ومصمم لخادم/Replica واحد مع Volume دائم.
+- التفاصيل الكاملة موجودة في README.md.
